@@ -14,11 +14,11 @@
         padding: 0;
     }
 
-	.app {
-	    margin: 0 auto;
-	    background-image: linear-gradient(to left bottom,#ffd6da,#efc9ed 50%,#d8d6ff);
-	    padding-bottom: 2rem;
-	}
+    .app {
+        margin: 0 auto;
+        background-image: linear-gradient(to left bottom,#ffd6da,#efc9ed 50%,#d8d6ff);
+        padding-bottom: 2rem;
+    }
 </style>
 <div class="app">
     <Client />
