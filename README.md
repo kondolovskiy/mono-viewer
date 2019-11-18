@@ -2,7 +2,7 @@
 
 ## Description
 It's unofficial [Monobank](https://monobank.ua/) library.
-Used official [API](https://api.monobank.ua/docs/) to get data about user account and accounts statement.
+Uses official [API](https://api.monobank.ua/docs/) to get data about user account and accounts statement.
 
 ## Installation
 
