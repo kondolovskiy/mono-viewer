@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 node_modules
 public/bundle.*
-srs/settings/settings.json
+src/settings/settings.json
