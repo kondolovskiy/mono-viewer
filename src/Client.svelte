@@ -27,6 +27,8 @@
     .client-accounts {
         display: flex;
         padding: 0;
+        justify-content: space-between;
+        max-width: 320px;
     }
 
     .client-accounts > li {
