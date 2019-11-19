@@ -10,10 +10,6 @@
 </script>
 
 <style>
-    :global(body) {
-        padding: 0;
-    }
-
     .app {
         margin: 0 auto;
         background-image: linear-gradient(to left bottom,#ffd6da,#efc9ed 50%,#d8d6ff);
