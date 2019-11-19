@@ -4,6 +4,7 @@
     import MoneyFormatter from './MoneyFormatter.svelte';
     import { Cache } from './services/cache';
     import { fetchData } from './services/api';
+    import codes from './data/mcc_codes.json';
 
     let statement = [];
 
@@ -40,6 +41,15 @@
         return t;
     }
 
+    // todo: optimise it
+    function getMccByCode(mcc) {
+        const category = codes.filter(c => +c.mcc === mcc)[0];
+        if (category) {
+            return category.edited_description
+        }
+        return '';
+    }
+
 </script>
 
 <style>
@@ -66,7 +76,12 @@
 
     .statement-item h3,
     .statement-item p {
-        margin: .4em;
+        margin: .4em 0;
+    }
+
+    .statement-item-mcc {
+        color: #666666;
+        font-size: .8em;
     }
 
 </style>
@@ -82,6 +97,7 @@
                     <MoneyFormatter colored={true} money={item.amount} code={item.currencyCode} />
                 </h3>
                 <p>{item.description}</p>
+                <p class="statement-item-mcc">{getMccByCode(item.mcc)}</p>
             </section>
         {/each}
     {/if}
